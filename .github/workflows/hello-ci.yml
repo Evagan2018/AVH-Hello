@@ -3,7 +3,7 @@ name: Build and Execution Test
   workflow_dispatch: null
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: 'true'
+  cancel-in-progress: true
 jobs:
   install_build_execute:
     runs-on: ubuntu-latest
