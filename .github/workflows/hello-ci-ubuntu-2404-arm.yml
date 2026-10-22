@@ -168,6 +168,8 @@ jobs:
       with:
         key: cmsis-packs
         path: /home/runner/.cache/arm/packs
+    - name: Activate Arm tool license
+      uses: ARM-software/cmsis-actions/armlm@v1
     - name: Install GCC 15.3.2 qualification probe
       id: gcc_probe
       if: ${{ !cancelled() }}
